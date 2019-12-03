@@ -15,6 +15,7 @@
 		7698C12F238D63F100FF4932 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7698C12D238D63F100FF4932 /* LaunchScreen.storyboard */; };
 		D225ECB42396673D001188C3 /* LauncherScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D225ECB32396673D001188C3 /* LauncherScreen.swift */; };
 		D225ECB623966D53001188C3 /* logoPNG.png in Resources */ = {isa = PBXBuildFile; fileRef = D225ECB523966D52001188C3 /* logoPNG.png */; };
+		D225ECB723967246001188C3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7698C130238D63F100FF4932 /* Info.plist */; };
 		E4641A60238D8B3D00603085 /* APIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4641A5F238D8B3D00603085 /* APIDelegate.swift */; };
 		E49BC3A1239650DF0005759E /* APIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BC3A0239650DF0005759E /* APIModels.swift */; };
 /* End PBXBuildFile section */
@@ -204,6 +205,7 @@
 				D225ECB623966D53001188C3 /* logoPNG.png in Resources */,
 				7698C12F238D63F100FF4932 /* LaunchScreen.storyboard in Resources */,
 				7698C12C238D63F100FF4932 /* Assets.xcassets in Resources */,
+				D225ECB723967246001188C3 /* Info.plist in Resources */,
 				7698C12A238D63F000FF4932 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
