@@ -8,11 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+
+class ViewController: UIViewController {
+    
+    private let api:APIDelegate = APIDelegate()
+
+    //MARK - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 
