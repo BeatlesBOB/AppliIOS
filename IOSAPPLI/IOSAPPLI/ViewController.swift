@@ -26,9 +26,11 @@ class ViewController: UIViewController,Delegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         api.delegate = self
-        api.fetchLatestMovies()
+//        api.getLatestMovies()
 //        api.searchMovie(name: "transformers")
 //        api.getMovieDetails(id: 335988)
+//        api.getGenreMovies(genres: [28])
+//        api.getYearMovies(year: 2018)
     }
 
 

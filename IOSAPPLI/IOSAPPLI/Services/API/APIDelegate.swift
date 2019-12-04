@@ -14,12 +14,11 @@ import Foundation
 class APIDelegate{
     var delegate:Delegate?
     
-    func fetchLatestMovies()->Void{
+    func getLatestMovies()->Void{
         let session = URLSession.shared.dataTask(with: URL(string: APIURL+"movie/now_playing?region=fr&"+APIKEY)!)
         {
             (data,response,error) in
             do{
-//                let jsonData = try JSONSerialization.jsonObject(with: data!, options: [])
                 let jsonData = try JSONDecoder().decode(LatestMovies.self,from:data!)
                 self.delegate?.callback(movies:jsonData)
             }catch{
@@ -55,6 +54,38 @@ class APIDelegate{
                     }
                 }
                 session.resume()
+    }
+    
+    func getGenreMovies(genres:[Int]){
+        var genresIds:String = ""
+        genres.forEach { (item) in
+            genresIds+=item.description+","
+        }
+        let session = URLSession.shared.dataTask(with: URL(string:APIURL+"discover/movie?sort_by=release_date.desc&release_date.lte=\(2019-12-25)&with_genres=\(genresIds)&\(APIKEY)")!)
+        {
+            (data,response,error) in
+            do{
+                let jsonData = try JSONDecoder().decode(GenresMovies.self,from:data!)
+                self.delegate?.callback(movies:jsonData)
+            }catch{
+                print(error)
+            }
+        }
+        session.resume()
+    }
+    
+    func getYearMovies(year:Int){
+        let session = URLSession.shared.dataTask(with: URL(string:APIURL+"discover/movie?sort_by=release_date.desc&year=\(year)&\(APIKEY)")!)
+        {
+            (data,response,error) in
+            do{
+                let jsonData = try JSONDecoder().decode(ArrayMovies.self,from:data!)
+                self.delegate?.callback(movies:jsonData)
+            }catch{
+                print(error)
+            }
+        }
+        session.resume()
     }
 }
 

@@ -42,6 +42,16 @@ struct Movie: Decodable{
     }
 }
 
+//MARK: - ArrayMovies
+struct ArrayMovies:Decodable{
+    let results:[Movie]?
+    let page:Int?
+    let total_pages:Int?
+    let total_results:Int?
+}
+
+
+//MARK: - LatestMovies
 struct LatestMovies:Decodable{
     let results:[Movie]?
     let page:Int?
@@ -53,6 +63,14 @@ struct LatestMovies:Decodable{
 struct Range:Decodable{
     let maximum:String?
     let minimum:String?
+}
+
+//MARK: - GenresMovies
+struct GenresMovies:Decodable{
+    let results:[Movie]?
+    let page:Int?
+    let total_pages:Int?
+    let total_results:Int?
 }
 
 struct GetResponse: Decodable{
