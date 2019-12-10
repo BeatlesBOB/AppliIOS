@@ -10,12 +10,36 @@ import UIKit
 
 class HeaderCollectionViewCell: UICollectionViewCell {
 
+	@IBOutlet weak var yearFilterView: FilterView!
+	@IBOutlet weak var likeFilterView: FilterView!
+	@IBOutlet weak var typeFilterView: FilterView!
+	@IBOutlet weak var statusFilterView: FilterView!
+	
+	var parentView: UIView?
     var isHeightCalculated: Bool = false
-    
+    var delegate: FilterProtocol?
+	
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
+	
+	func configure() {
+		yearFilterView.configure(.year)
+		yearFilterView.parentView = parentView
+		yearFilterView.delegate = delegate
+		
+		likeFilterView.configure(.like)
+		likeFilterView.parentView = parentView
+		likeFilterView.delegate = delegate
+		
+		typeFilterView.configure(.type)
+		typeFilterView.parentView = parentView
+		typeFilterView.delegate = delegate
+		
+		statusFilterView.configure(.status)
+		statusFilterView.parentView = parentView
+		statusFilterView.delegate = delegate
+	}
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         setNeedsLayout()

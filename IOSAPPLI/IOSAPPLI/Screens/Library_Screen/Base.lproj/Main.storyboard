@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pfJ-Wx-FGH">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pfJ-Wx-FGH">
+                                <rect key="frame" x="10" y="44" width="394" height="818"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Msj-Qo-Nlq">
                                     <size key="itemSize" width="400" height="400"/>
@@ -28,7 +28,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="n9o-zp-jmu">
-                                        <rect key="frame" x="7" y="0.0" width="400" height="400"/>
+                                        <rect key="frame" x="-3" y="0.0" width="400" height="400"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kAg-aB-UBw">
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
@@ -42,9 +42,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.67450980390000004" green="0.34509803919999998" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="pfJ-Wx-FGH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5rP-Qf-EWw"/>
+                            <constraint firstItem="pfJ-Wx-FGH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="5rP-Qf-EWw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pfJ-Wx-FGH" secondAttribute="bottom" id="SCi-Jt-0zK"/>
-                            <constraint firstItem="pfJ-Wx-FGH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tek-xJ-6QW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pfJ-Wx-FGH" secondAttribute="trailing" constant="10" id="tek-xJ-6QW"/>
                             <constraint firstItem="pfJ-Wx-FGH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wGO-dv-UBm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, Delegate, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, Delegate, UICollectionViewDelegateFlowLayout, FilterProtocol {
     
     func callback(movies: Any) {
         self.movies = (movies as! LatestMovies).results!
@@ -58,16 +58,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let screenSize = UIScreen.main.bounds
-        let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
-        
+		let totalWidth = collectionView.frame.width
+		
         if indexPath.section == 0 {
-            return CGSize(width: screenWidth, height: 500)
-            //return CGSize(width: screenWidth, height: 200)
+            return CGSize(width: totalWidth, height: 385)
             
         }
-        return CGSize(width: screenWidth/2 -  5 , height: 300)
+        return CGSize(width: totalWidth/2 -  5 , height: 300)
         
     }
     
@@ -75,14 +72,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         if indexPath.section == 0 {
             let headerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeaderCollectionViewCell", for: indexPath) as! HeaderCollectionViewCell
+			headerCell.parentView = self.collectionview
+			headerCell.configure()
+			headerCell.delegate = self
             return headerCell
             
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardMovieCollectionViewCell", for: indexPath) as! CardMovieCollectionViewCell
-        
             let currentMovie = movies[indexPath.row]
             cell.displayContent(filmimage: currentMovie.poster_path!, titre: currentMovie.title!, vote: currentMovie.vote_average!)
                 return cell
-            }
-        }
-    }
+		}
+	}
+	
+	// MARK: - FilterProtocol
+	func selectFilter(type: FilterType, value: String) {
+		// TODO: Ici on va filter les résultats en fonction du filtre appliqué
+		print("On vient de filtrer le select \(type.rawValue) avec la valeur \(value)")
+	}
+}
