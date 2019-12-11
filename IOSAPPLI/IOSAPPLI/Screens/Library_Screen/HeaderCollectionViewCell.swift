@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HeaderCollectionViewCell: UICollectionViewCell,UITextFieldDelegate {
+class HeaderCollectionViewCell: UICollectionViewCell,UITextFieldDelegate,UIGestureRecognizerDelegate{
 
     @IBOutlet weak var searchbar: UITextField!
     @IBOutlet weak var yearFilterView: FilterView!
@@ -40,8 +40,6 @@ class HeaderCollectionViewCell: UICollectionViewCell,UITextFieldDelegate {
 		statusFilterView.configure(.status)
 		statusFilterView.parentView = parentView
 		statusFilterView.delegate = delegate
-        
-        searchbar.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingDidEnd)
 
         searchbar.delegate = self
 	}
@@ -57,10 +55,15 @@ class HeaderCollectionViewCell: UICollectionViewCell,UITextFieldDelegate {
 		return layoutAttributes
     }
     
-    
-    @objc func textFieldDidChange(_ textField: UITextField) {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let valuetext = searchbar.text
         delegate?.updateSearchText(value: valuetext!)
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("TOUCHER")
+        searchbar.resignFirstResponder()
     }
 
 }

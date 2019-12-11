@@ -159,6 +159,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if(value.count != 0)
         {
             api.searchMovie(name: value)
+        }else{
+            api.getLatestMovies()
         }
        
     }

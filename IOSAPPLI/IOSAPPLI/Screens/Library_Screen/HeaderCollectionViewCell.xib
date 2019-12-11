@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="height" constant="50" id="X7c-wu-TTQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhX-kX-zRX" customClass="FilterView" customModule="IOSAPPLI" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="265" width="402" height="100"/>
