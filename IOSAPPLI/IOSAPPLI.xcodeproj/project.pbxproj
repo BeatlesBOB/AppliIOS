@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		763852FE239E487900C743F1 /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763852FC239E487900C743F1 /* HeaderCollectionViewCell.swift */; };
+		763852FF239E487900C743F1 /* HeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 763852FD239E487900C743F1 /* HeaderCollectionViewCell.xib */; };
 		7698C123238D63F000FF4932 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698C122238D63F000FF4932 /* AppDelegate.swift */; };
 		7698C125238D63F000FF4932 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698C124238D63F000FF4932 /* SceneDelegate.swift */; };
 		7698C127238D63F000FF4932 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7698C126238D63F000FF4932 /* ViewController.swift */; };
@@ -15,6 +17,8 @@
 		7698C12F238D63F100FF4932 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7698C12D238D63F100FF4932 /* LaunchScreen.storyboard */; };
 		76ED089823979F6A004DDB74 /* CardMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ED089623979F6A004DDB74 /* CardMovieCollectionViewCell.swift */; };
 		76ED089923979F6A004DDB74 /* CardMovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76ED089723979F6A004DDB74 /* CardMovieCollectionViewCell.xib */; };
+		E3D099A8239FD2E400C1EFAE /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D099A7239FD2E400C1EFAE /* FilterView.swift */; };
+		E3D099AA239FD2F800C1EFAE /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D099A9239FD2F800C1EFAE /* FilterView.xib */; };
 		E4641A60238D8B3D00603085 /* APIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4641A5F238D8B3D00603085 /* APIDelegate.swift */; };
 		E46C8175239E31E3003D6B62 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C8174239E31E3003D6B62 /* Details.swift */; };
 		E46C8177239E31F2003D6B62 /* DetailsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E46C8176239E31F2003D6B62 /* DetailsScreen.storyboard */; };
@@ -22,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		763852FC239E487900C743F1 /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		763852FD239E487900C743F1 /* HeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		7698C11F238D63F000FF4932 /* IOSAPPLI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSAPPLI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7698C122238D63F000FF4932 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7698C124238D63F000FF4932 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +38,8 @@
 		7698C130238D63F100FF4932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76ED089623979F6A004DDB74 /* CardMovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		76ED089723979F6A004DDB74 /* CardMovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardMovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		E3D099A7239FD2E400C1EFAE /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		E3D099A9239FD2F800C1EFAE /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		E4641A5F238D8B3D00603085 /* APIDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDelegate.swift; sourceTree = "<group>"; };
 		E46C8174239E31E3003D6B62 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Details.swift; path = IOSAPPLI/Details.swift; sourceTree = SOURCE_ROOT; };
 		E46C8176239E31F2003D6B62 /* DetailsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = DetailsScreen.storyboard; path = IOSAPPLI/DetailsScreen.storyboard; sourceTree = SOURCE_ROOT; };
@@ -113,6 +121,10 @@
 				76ED089723979F6A004DDB74 /* CardMovieCollectionViewCell.xib */,
 				7698C128238D63F000FF4932 /* Main.storyboard */,
 				7698C126238D63F000FF4932 /* ViewController.swift */,
+				763852FC239E487900C743F1 /* HeaderCollectionViewCell.swift */,
+				763852FD239E487900C743F1 /* HeaderCollectionViewCell.xib */,
+				E3D099A7239FD2E400C1EFAE /* FilterView.swift */,
+				E3D099A9239FD2F800C1EFAE /* FilterView.xib */,
 			);
 			path = Library_Screen;
 			sourceTree = "<group>";
@@ -209,8 +221,13 @@
 			files = (
 				7698C12F238D63F100FF4932 /* LaunchScreen.storyboard in Resources */,
 				76ED089923979F6A004DDB74 /* CardMovieCollectionViewCell.xib in Resources */,
+				E3D099AA239FD2F800C1EFAE /* FilterView.xib in Resources */,
 				7698C12C238D63F100FF4932 /* Assets.xcassets in Resources */,
+<<<<<<< HEAD
 				E46C8177239E31F2003D6B62 /* DetailsScreen.storyboard in Resources */,
+=======
+				763852FF239E487900C743F1 /* HeaderCollectionViewCell.xib in Resources */,
+>>>>>>> master
 				7698C12A238D63F000FF4932 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +242,8 @@
 				7698C127238D63F000FF4932 /* ViewController.swift in Sources */,
 				76ED089823979F6A004DDB74 /* CardMovieCollectionViewCell.swift in Sources */,
 				E49BC3A1239650DF0005759E /* APIModels.swift in Sources */,
+				763852FE239E487900C743F1 /* HeaderCollectionViewCell.swift in Sources */,
+				E3D099A8239FD2E400C1EFAE /* FilterView.swift in Sources */,
 				E4641A60238D8B3D00603085 /* APIDelegate.swift in Sources */,
 				7698C123238D63F000FF4932 /* AppDelegate.swift in Sources */,
 				7698C125238D63F000FF4932 /* SceneDelegate.swift in Sources */,
