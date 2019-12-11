@@ -18,6 +18,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.movies = (movies as! YearMovies).results!
         case is LatestMovies:
             self.movies = (movies as! LatestMovies).results!
+        case is GenresMovies:
+            self.movies = (movies as! GenresMovies).results!
         default:
             break
         }
@@ -120,7 +122,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             api.getYearMovies(year: 1995)
         }
         
+        if((type == .type) && (value == "Action"))
+        {
+            api.getGenreMovies(genres:[28])
+        }
         
+        if((type == .type) && (value == "Adventure"))
+        {
+            api.getGenreMovies(genres:[12])
+        }
+        
+        if((type == .type) && (value == "Animation"))
+        {
+            api.getGenreMovies(genres:[16])
+        }
+        
+        if((type == .type) && (value == "Comedy"))
+        {
+            api.getGenreMovies(genres:[35])
+        }
         
         
         
