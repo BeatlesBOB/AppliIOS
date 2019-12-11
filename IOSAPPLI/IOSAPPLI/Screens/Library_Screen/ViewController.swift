@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, Delegate, UICollectionViewDelegateFlowLayout, FilterProtocol {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, Delegate, UICollectionViewDelegateFlowLayout, FilterProtocol, UITextFieldDelegate {
     
     func callback(movies: Any) {
         switch movies.self {
@@ -20,6 +20,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.movies = (movies as! LatestMovies).results!
         case is GenresMovies:
             self.movies = (movies as! GenresMovies).results!
+        case is SearchMovies:
+            self.movies = (movies as! SearchMovies).results!
         default:
             break
         }
@@ -44,6 +46,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         api.getLatestMovies()
         collectionview.delegate = self
         collectionview.dataSource = self
+        
 
         collectionview.register(UINib(nibName: "HeaderCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "HeaderCollectionViewCell")
         collectionview.register(UINib(nibName: "CardMovieCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "CardMovieCollectionViewCell")
@@ -141,10 +144,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         {
             api.getGenreMovies(genres:[35])
         }
-        
-        
-        
-        
+
 		print("On vient de filtrer le select \(type.rawValue) avec la valeur \(value)")
 	}
+    func updateSearchText(value: String){
+        
+        if(value.count != 0)
+        {
+            api.searchMovie(name: value)
+        }
+       
+    }
+    
+   
 }

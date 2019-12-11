@@ -31,7 +31,7 @@ class APIDelegate{
     }
     
     func searchMovie(name:String){
-        let session = URLSession.shared.dataTask(with: URL(string:"https://api.themoviedb.org/3/search/movie?query=transformers&"+APIKEY)!)
+        let session = URLSession.shared.dataTask(with: URL(string:"https://api.themoviedb.org/3/search/movie?query=\(name)&"+APIKEY)!)
             {
                 (data,response,error) in
                 do{

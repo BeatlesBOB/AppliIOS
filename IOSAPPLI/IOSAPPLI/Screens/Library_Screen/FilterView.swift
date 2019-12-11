@@ -10,6 +10,7 @@ import UIKit
 
 protocol FilterProtocol: class {
 	func selectFilter(type: FilterType, value: String)
+    func updateSearchText(value: String)
 }
 
 enum FilterType : String {

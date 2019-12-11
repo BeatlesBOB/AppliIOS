@@ -112,6 +112,7 @@
             <size key="customSize" width="824" height="971"/>
             <connections>
                 <outlet property="likeFilterView" destination="hjZ-B2-WwU" id="Gdf-TR-9eQ"/>
+                <outlet property="searchbar" destination="UIX-QZ-WdA" id="6GT-PM-ApH"/>
                 <outlet property="statusFilterView" destination="kP2-mI-q8c" id="zDK-r0-4Fn"/>
                 <outlet property="typeFilterView" destination="nhX-kX-zRX" id="aOW-yz-TOf"/>
                 <outlet property="yearFilterView" destination="tTf-jD-aVo" id="ImG-qm-Snn"/>
