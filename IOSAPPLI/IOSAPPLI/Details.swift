@@ -13,6 +13,9 @@ class DetailsScreen: UIViewController,Delegate{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var vote: UITextField!
+    @IBOutlet weak var descriptionText: UITextView!
+    
+    
     private let api:APIDelegate = APIDelegate()
     
     
@@ -40,5 +43,6 @@ class DetailsScreen: UIViewController,Delegate{
             }}
         session.resume()
         self.textField.text = (movies as! LatestMovies).results?.randomElement()!.original_title
+        self.descriptionText.text = (movies as! LatestMovies).results?.randomElement()!.overview
     }
 }
