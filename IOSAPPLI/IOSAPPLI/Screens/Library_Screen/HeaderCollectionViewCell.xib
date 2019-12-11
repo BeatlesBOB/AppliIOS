@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderCollectionViewCell" id="gTV-IL-0wX" customClass="HeaderCollectionViewCell" customModule="IOSAPPLI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="824" height="385"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="824" height="385"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OD5-c2-r2f">
+                        <rect key="frame" x="0.0" y="0.0" width="824" height="385"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILM" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arI-9W-J7P">
+                                <rect key="frame" x="0.0" y="30" width="824" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="mHf-25-Wo7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UIX-QZ-WdA">
+                                <rect key="frame" x="0.0" y="85" width="824" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="X7c-wu-TTQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhX-kX-zRX" customClass="FilterView" customModule="IOSAPPLI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="265" width="402" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="62x-5s-fjH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTf-jD-aVo" customClass="FilterView" customModule="IOSAPPLI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="155" width="402" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="rFx-Ne-qYa"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6L-Cg-D8N" userLabel="CenterView">
+                                <rect key="frame" x="412" y="155" width="0.0" height="0.0"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="SbN-SR-9dm"/>
+                                    <constraint firstAttribute="width" id="neq-Uc-wdj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kP2-mI-q8c" customClass="FilterView" customModule="IOSAPPLI" customModuleProvider="target">
+                                <rect key="frame" x="422" y="265" width="402" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="eYV-u4-RHi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjZ-B2-WwU" customClass="FilterView" customModule="IOSAPPLI" customModuleProvider="target">
+                                <rect key="frame" x="422" y="155" width="402" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3ns-v2-26j"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kP2-mI-q8c" secondAttribute="bottom" constant="20" id="11g-Qm-3Ra"/>
+                            <constraint firstItem="nhX-kX-zRX" firstAttribute="leading" secondItem="OD5-c2-r2f" secondAttribute="leading" id="1oN-zY-qhu"/>
+                            <constraint firstItem="hjZ-B2-WwU" firstAttribute="leading" secondItem="F6L-Cg-D8N" secondAttribute="trailing" constant="10" id="1su-YA-5Um"/>
+                            <constraint firstItem="tTf-jD-aVo" firstAttribute="leading" secondItem="OD5-c2-r2f" secondAttribute="leading" id="21e-jc-g7i"/>
+                            <constraint firstItem="tTf-jD-aVo" firstAttribute="top" secondItem="UIX-QZ-WdA" secondAttribute="bottom" constant="20" id="Hzb-EN-WoF"/>
+                            <constraint firstItem="nhX-kX-zRX" firstAttribute="top" secondItem="tTf-jD-aVo" secondAttribute="bottom" constant="10" id="KdS-DV-Crq"/>
+                            <constraint firstAttribute="trailing" secondItem="UIX-QZ-WdA" secondAttribute="trailing" id="LOQ-2O-aku"/>
+                            <constraint firstItem="arI-9W-J7P" firstAttribute="centerX" secondItem="OD5-c2-r2f" secondAttribute="centerX" id="ON8-FJ-vTb"/>
+                            <constraint firstAttribute="trailing" secondItem="hjZ-B2-WwU" secondAttribute="trailing" id="Pjg-ty-h5l"/>
+                            <constraint firstItem="kP2-mI-q8c" firstAttribute="leading" secondItem="F6L-Cg-D8N" secondAttribute="trailing" constant="10" id="QCY-uJ-GQC"/>
+                            <constraint firstItem="F6L-Cg-D8N" firstAttribute="leading" secondItem="tTf-jD-aVo" secondAttribute="trailing" constant="10" id="Ukt-7z-w3l"/>
+                            <constraint firstAttribute="trailing" secondItem="arI-9W-J7P" secondAttribute="trailing" id="XFZ-ba-r3u"/>
+                            <constraint firstItem="F6L-Cg-D8N" firstAttribute="leading" secondItem="nhX-kX-zRX" secondAttribute="trailing" constant="10" id="XoL-TQ-e4V"/>
+                            <constraint firstItem="kP2-mI-q8c" firstAttribute="top" secondItem="hjZ-B2-WwU" secondAttribute="bottom" constant="10" id="YIW-zy-nKK"/>
+                            <constraint firstItem="arI-9W-J7P" firstAttribute="top" secondItem="OD5-c2-r2f" secondAttribute="top" constant="30" id="aTl-4y-Hco"/>
+                            <constraint firstItem="arI-9W-J7P" firstAttribute="leading" secondItem="OD5-c2-r2f" secondAttribute="leading" id="b3j-sy-sr7"/>
+                            <constraint firstItem="hjZ-B2-WwU" firstAttribute="top" secondItem="UIX-QZ-WdA" secondAttribute="bottom" constant="20" id="fyW-Rh-EhI"/>
+                            <constraint firstItem="UIX-QZ-WdA" firstAttribute="top" secondItem="arI-9W-J7P" secondAttribute="bottom" constant="20" id="g8b-XV-Neb"/>
+                            <constraint firstItem="F6L-Cg-D8N" firstAttribute="top" secondItem="UIX-QZ-WdA" secondAttribute="bottom" constant="20" id="oSp-lX-aCM"/>
+                            <constraint firstItem="F6L-Cg-D8N" firstAttribute="centerX" secondItem="OD5-c2-r2f" secondAttribute="centerX" id="orh-l3-DLq"/>
+                            <constraint firstItem="UIX-QZ-WdA" firstAttribute="leading" secondItem="OD5-c2-r2f" secondAttribute="leading" id="q8k-gO-swy"/>
+                            <constraint firstAttribute="bottom" secondItem="nhX-kX-zRX" secondAttribute="bottom" constant="20" id="rFv-7E-XN7"/>
+                            <constraint firstAttribute="trailing" secondItem="kP2-mI-q8c" secondAttribute="trailing" id="zDl-fa-qis"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.67450980390000004" green="0.34509803919999998" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="OD5-c2-r2f" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Tat-4J-o66"/>
+                <constraint firstItem="OD5-c2-r2f" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UML-qn-wZQ"/>
+                <constraint firstAttribute="trailing" secondItem="OD5-c2-r2f" secondAttribute="trailing" id="m9N-uI-QKq"/>
+                <constraint firstAttribute="bottom" secondItem="OD5-c2-r2f" secondAttribute="bottom" id="sXt-sG-a24"/>
+            </constraints>
+            <size key="customSize" width="824" height="971"/>
+            <connections>
+                <outlet property="likeFilterView" destination="hjZ-B2-WwU" id="Gdf-TR-9eQ"/>
+                <outlet property="statusFilterView" destination="kP2-mI-q8c" id="zDK-r0-4Fn"/>
+                <outlet property="typeFilterView" destination="nhX-kX-zRX" id="aOW-yz-TOf"/>
+                <outlet property="yearFilterView" destination="tTf-jD-aVo" id="ImG-qm-Snn"/>
+            </connections>
+            <point key="canvasLocation" x="265.21739130434787" y="432.25446428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>
