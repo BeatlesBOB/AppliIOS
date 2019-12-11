@@ -43,7 +43,7 @@ struct Movie: Decodable{
 }
 
 //MARK: - ArrayMovies
-struct ArrayMovies:Decodable{
+struct YearMovies:Decodable{
     let results:[Movie]?
     let page:Int?
     let total_pages:Int?
@@ -73,7 +73,7 @@ struct GenresMovies:Decodable{
     let total_results:Int?
 }
 
-struct GetResponse: Decodable{
+struct SearchMovies: Decodable{
     let page:Int?
     let total_results:Int?
     let total_pages:Int?

@@ -21,6 +21,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+//        showD(UIStoryboard(name: "DetailsScreen", bundle: nil).instantiateViewController(identifier: "DetailsScreen"), sender: nil)
+        showDetailViewController(UIStoryboard(name: "DetailsScreen", bundle: nil).instantiateViewController(identifier: "DetailsScreen"), sender: self)
         
     }
 
@@ -32,7 +37,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardMovieCollectionViewCell", for: indexPath) as! CardMovieCollectionViewCell
         
         let currentMovie = movies[indexPath.row]
-        cell.displayContent(filmimage: currentMovie.poster_path, titre: currentMovie.title, vote: currentMovie.vote_average)
+        cell.displayContent(filmimage: currentMovie.poster_path!, titre: currentMovie.title!, vote: currentMovie.vote_average!)
             return cell
         }
     }

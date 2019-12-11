@@ -241,11 +241,22 @@
                     </view>
                     <connections>
                         <outlet property="collectionview" destination="pfJ-Wx-FGH" id="GIb-XI-6zU"/>
+                        <segue destination="8Zq-zf-rV9" kind="showDetail" destinationCreationSelector="transition:" id="DtN-dz-65P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+            <point key="canvasLocation" x="113" y="180"/>
+        </scene>
+        <!--DetailsScreen-->
+        <scene sceneID="ohn-5d-WE4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailsScreen" referencedIdentifier="DetailsScreen" id="8Zq-zf-rV9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6kD-qn-vOa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1pU-kX-aF8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="626" y="121"/>
         </scene>
     </scenes>
     <resources>

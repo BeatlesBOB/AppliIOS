@@ -20,7 +20,9 @@ class APIDelegate{
             (data,response,error) in
             do{
                 let jsonData = try JSONDecoder().decode(LatestMovies.self,from:data!)
-                self.delegate?.callback(movies:jsonData)
+                DispatchQueue.main.async {
+                    self.delegate?.callback(movies:jsonData)
+                }
             }catch{
                 print(error)
             }
@@ -33,8 +35,10 @@ class APIDelegate{
             {
                 (data,response,error) in
                 do{
-                    let jsonData = try JSONDecoder().decode(GetResponse.self,from:data!)
-                    self.delegate?.callback(movies: jsonData)
+                    let jsonData = try JSONDecoder().decode(SearchMovies.self,from:data!)
+                    DispatchQueue.main.async {
+                        self.delegate?.callback(movies:jsonData)
+                    }
                 }catch{
                     print(error)
                 }
@@ -48,7 +52,9 @@ class APIDelegate{
                     (data,response,error) in
                     do{
                         let jsonData = try JSONDecoder().decode(MovieDetails.self,from:data!)
-                        self.delegate?.callback(movies:jsonData)
+                        DispatchQueue.main.async {
+                            self.delegate?.callback(movies:jsonData)
+                        }
                     }catch{
                         print(error)
                     }
@@ -66,7 +72,9 @@ class APIDelegate{
             (data,response,error) in
             do{
                 let jsonData = try JSONDecoder().decode(GenresMovies.self,from:data!)
-                self.delegate?.callback(movies:jsonData)
+                DispatchQueue.main.async {
+                    self.delegate?.callback(movies:jsonData)
+                }
             }catch{
                 print(error)
             }
@@ -79,8 +87,10 @@ class APIDelegate{
         {
             (data,response,error) in
             do{
-                let jsonData = try JSONDecoder().decode(ArrayMovies.self,from:data!)
-                self.delegate?.callback(movies:jsonData)
+                let jsonData = try JSONDecoder().decode(YearMovies.self,from:data!)
+                DispatchQueue.main.async {
+                    self.delegate?.callback(movies:jsonData)
+                }
             }catch{
                 print(error)
             }
