@@ -40,7 +40,7 @@ class DetailsScreen: UIViewController,Delegate{
                
                 self.vote.text = (movies as! MovieDetails).vote_average?.description
             self.imageView.image?.withTintColor(UIColor.red)
-            }}
+        }}
         session.resume()
         self.textField.text = (movies as! MovieDetails).original_title
         self.descriptionText.text = (movies as! MovieDetails).overview

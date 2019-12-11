@@ -8,9 +8,10 @@
 
 import UIKit
 
-class HeaderCollectionViewCell: UICollectionViewCell {
+class HeaderCollectionViewCell: UICollectionViewCell,UITextFieldDelegate {
 
-	@IBOutlet weak var yearFilterView: FilterView!
+    @IBOutlet weak var searchbar: UITextField!
+    @IBOutlet weak var yearFilterView: FilterView!
 	@IBOutlet weak var likeFilterView: FilterView!
 	@IBOutlet weak var typeFilterView: FilterView!
 	@IBOutlet weak var statusFilterView: FilterView!
@@ -39,6 +40,10 @@ class HeaderCollectionViewCell: UICollectionViewCell {
 		statusFilterView.configure(.status)
 		statusFilterView.parentView = parentView
 		statusFilterView.delegate = delegate
+        
+        searchbar.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingDidEnd)
+
+        searchbar.delegate = self
 	}
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
@@ -51,4 +56,11 @@ class HeaderCollectionViewCell: UICollectionViewCell {
 		layoutAttributes.frame = newFrame
 		return layoutAttributes
     }
+    
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        let valuetext = searchbar.text
+        delegate?.updateSearchText(value: valuetext!)
+    }
+
 }

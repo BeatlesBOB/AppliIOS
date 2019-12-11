@@ -25,12 +25,16 @@ class CardMovieCollectionViewCell: UICollectionViewCell {
     
     func displayContent(filmimage: String, titre: String, vote: double_t){
 
-        if let url = NSURL(string: filmimage){
-            if let data = NSData(contentsOf: url as URL){
-                filmImageView.contentMode = UIView.ContentMode.scaleAspectFit
-                filmImageView.image = UIImage(data: data as Data)
-            }
+        let url = URL(string: "https://image.tmdb.org/t/p/w300"+filmimage)
+
+        do {
+            let data = try Data(contentsOf: url!)
+            self.filmImageView.image = UIImage(data: data)
+            
+        }catch let err {
+            print(" Error : \(err.localizedDescription)")
         }
+
         titreLabel.text = titre
         realLabel.text = String(describing: vote)
         

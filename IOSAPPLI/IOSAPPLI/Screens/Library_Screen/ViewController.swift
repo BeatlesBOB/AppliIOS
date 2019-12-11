@@ -10,10 +10,21 @@ import UIKit
 
 
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, Delegate, UICollectionViewDelegateFlowLayout, FilterProtocol {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, Delegate, UICollectionViewDelegateFlowLayout, FilterProtocol, UITextFieldDelegate {
     
     func callback(movies: Any) {
-        self.movies = (movies as! LatestMovies).results!
+        switch movies.self {
+        case is YearMovies:
+            self.movies = (movies as! YearMovies).results!
+        case is LatestMovies:
+            self.movies = (movies as! LatestMovies).results!
+        case is GenresMovies:
+            self.movies = (movies as! GenresMovies).results!
+        case is SearchMovies:
+            self.movies = (movies as! SearchMovies).results!
+        default:
+            break
+        }
         
         DispatchQueue.main.async {
             self.collectionview.reloadData()
@@ -35,6 +46,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         api.getLatestMovies()
         collectionview.delegate = self
         collectionview.dataSource = self
+        
 
         collectionview.register(UINib(nibName: "HeaderCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "HeaderCollectionViewCell")
         collectionview.register(UINib(nibName: "CardMovieCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "CardMovieCollectionViewCell")
@@ -83,7 +95,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardMovieCollectionViewCell", for: indexPath) as! CardMovieCollectionViewCell
             let currentMovie = movies[indexPath.row]
-            cell.displayContent(filmimage: currentMovie.poster_path!, titre: currentMovie.title!, vote: currentMovie.vote_average!)
+            cell.displayContent(filmimage: currentMovie.poster_path ?? "", titre: currentMovie.title ?? "", vote: currentMovie.vote_average ?? 0)
                 return cell
 		}
 	}
@@ -99,7 +111,57 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 	
 	// MARK: - FilterProtocol
 	func selectFilter(type: FilterType, value: String) {
-		// TODO: Ici on va filter les résultats en fonction du filtre appliqué
+
+        if ((type == .year) && (value == "1999"))
+        {
+             api.getYearMovies(year: 1999)
+        }
+        
+        if ((type == .year) && (value == "2019"))
+        {
+             api.getYearMovies(year: 2019)
+        }
+        
+        if ((type == .year) && (value == "1997"))
+        {
+            api.getYearMovies(year: 1997)
+        }
+        
+        if ((type == .year) && (value == "1995"))
+        {
+            api.getYearMovies(year: 1995)
+        }
+        
+        if((type == .type) && (value == "Action"))
+        {
+            api.getGenreMovies(genres:[28])
+        }
+        
+        if((type == .type) && (value == "Adventure"))
+        {
+            api.getGenreMovies(genres:[12])
+        }
+        
+        if((type == .type) && (value == "Animation"))
+        {
+            api.getGenreMovies(genres:[16])
+        }
+        
+        if((type == .type) && (value == "Comedy"))
+        {
+            api.getGenreMovies(genres:[35])
+        }
+
 		print("On vient de filtrer le select \(type.rawValue) avec la valeur \(value)")
 	}
+    func updateSearchText(value: String){
+        
+        if(value.count != 0)
+        {
+            api.searchMovie(name: value)
+        }
+       
+    }
+    
+   
 }
