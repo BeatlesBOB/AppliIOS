@@ -72,19 +72,23 @@ class FilterView: UIView, UITableViewDelegate, UITableViewDataSource {
 		case .year:
 			iconImageView.image = UIImage(named: "Fichier 27")
 			titleLabel.text = "Années"
-			selectValues = ["A", "B", "C", "D"]
+			selectValues = ["2019", "1999", "1997", "1995"]
+            selectButton.setTitle("Années",for: .normal)
 		case .like:
 			iconImageView.image = UIImage(named: "Fichier 19")
 			titleLabel.text = "Aimer"
-			selectValues = ["E", "F", "G", "H"]
+			selectValues = ["Aime", "Aime pas"]
+            selectButton.setTitle("Aimer",for: .normal)
 		case .type:
 			iconImageView.image = UIImage(named: "Fichier 1")
 			titleLabel.text = "Genre"
-			selectValues = ["I", "J", "K", "L"]
+			selectValues = ["Action", "Adventure", "Comedy", "Drame"]
+            selectButton.setTitle("Genre",for: .normal)
 		case .status:
 			iconImageView.image = UIImage(named: "Fichier 21")
 			titleLabel.text = "Status"
-			selectValues = ["M", "N", "O", "P"]
+			selectValues = ["À voir", "Vu", "À revoir"]
+            selectButton.setTitle("Status",for: .normal)
 		}
 		
 		contentView.clipsToBounds = false
