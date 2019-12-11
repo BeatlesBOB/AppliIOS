@@ -37,7 +37,7 @@ class DetailsScreen: UIViewController,Delegate{
                
                 self.vote.text = (movies as! LatestMovies).results?.first?.vote_average!.description
             self.imageView.image?.withTintColor(UIColor.red)
-            }}
+        }}
         session.resume()
         self.textField.text = (movies as! LatestMovies).results?.randomElement()!.original_title
     }

@@ -13,7 +13,14 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, Delegate, UICollectionViewDelegateFlowLayout, FilterProtocol {
     
     func callback(movies: Any) {
-        self.movies = (movies as! LatestMovies).results!
+        switch movies.self {
+        case is YearMovies:
+            self.movies = (movies as! YearMovies).results!
+        case is LatestMovies:
+            self.movies = (movies as! LatestMovies).results!
+        default:
+            break
+        }
         
         DispatchQueue.main.async {
             self.collectionview.reloadData()
@@ -85,14 +92,39 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardMovieCollectionViewCell", for: indexPath) as! CardMovieCollectionViewCell
             let currentMovie = movies[indexPath.row]
-            cell.displayContent(filmimage: currentMovie.poster_path!, titre: currentMovie.title!, vote: currentMovie.vote_average!)
+            cell.displayContent(filmimage: currentMovie.poster_path ?? "", titre: currentMovie.title ?? "", vote: currentMovie.vote_average ?? 0)
                 return cell
 		}
 	}
 	
 	// MARK: - FilterProtocol
 	func selectFilter(type: FilterType, value: String) {
-		// TODO: Ici on va filter les résultats en fonction du filtre appliqué
+
+        if ((type == .year) && (value == "1999"))
+        {
+             api.getYearMovies(year: 1999)
+        }
+        
+        if ((type == .year) && (value == "2019"))
+        {
+             api.getYearMovies(year: 2019)
+        }
+        
+        if ((type == .year) && (value == "1997"))
+        {
+            api.getYearMovies(year: 1997)
+        }
+        
+        if ((type == .year) && (value == "1995"))
+        {
+            api.getYearMovies(year: 1995)
+        }
+        
+        
+        
+        
+        
+        
 		print("On vient de filtrer le select \(type.rawValue) avec la valeur \(value)")
 	}
 }

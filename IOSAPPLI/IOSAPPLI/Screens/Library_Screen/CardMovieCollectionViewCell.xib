@@ -10,68 +10,57 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardMovieCollectionViewCell" id="gTV-IL-0wX" customClass="CardMovieCollectionViewCell" customModule="IOSAPPLI">
-            <rect key="frame" x="0.0" y="0.0" width="378" height="708"/>
+            <rect key="frame" x="0.0" y="0.0" width="521" height="594"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="378" height="708"/>
+                <rect key="frame" x="0.0" y="0.0" width="521" height="594"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ypo-0p-xeN">
-                        <rect key="frame" x="0.0" y="0.0" width="378" height="413"/>
-                    </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GnH-T7-YlV">
-                        <rect key="frame" x="194" y="541" width="164" height="136"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="164" id="7RO-R5-Wii"/>
-                            <constraint firstAttribute="height" constant="136" id="neA-dA-FDi"/>
-                        </constraints>
+                        <rect key="frame" x="0.0" y="0.0" width="521" height="499"/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fichier 19" translatesAutoresizingMaskIntoConstraints="NO" id="tlT-U2-cpi">
-                        <rect key="frame" x="338" y="0.0" width="40" height="40"/>
+                        <rect key="frame" x="481" y="0.0" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="VsG-4G-b0S"/>
                             <constraint firstAttribute="height" constant="40" id="dTl-4M-XKY"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8Y-va-8Fz">
-                        <rect key="frame" x="20" y="433" width="348" height="24"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8Y-va-8Fz">
+                        <rect key="frame" x="20" y="507" width="39.5" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realisateur" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCv-dy-SkI">
-                        <rect key="frame" x="20" y="492" width="76" height="18"/>
+                        <rect key="frame" x="20" y="556" width="76" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="0.38358274647887325" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.38358274650000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="ypo-0p-xeN" secondAttribute="trailing" id="2j5-Fr-XyB"/>
+                <constraint firstItem="zCv-dy-SkI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="16G-zQ-ATA"/>
                 <constraint firstAttribute="trailing" secondItem="tlT-U2-cpi" secondAttribute="trailing" id="3kI-vh-jIs"/>
-                <constraint firstItem="GnH-T7-YlV" firstAttribute="top" secondItem="ypo-0p-xeN" secondAttribute="bottom" constant="128" id="C1B-k1-zJL"/>
-                <constraint firstAttribute="trailing" secondItem="GnH-T7-YlV" secondAttribute="trailing" constant="20" id="Jrh-jG-Fnx"/>
-                <constraint firstItem="h8Y-va-8Fz" firstAttribute="top" secondItem="ypo-0p-xeN" secondAttribute="bottom" constant="20" id="LN9-Jk-ga8"/>
-                <constraint firstItem="zCv-dy-SkI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Ma6-gC-SQq"/>
-                <constraint firstAttribute="bottom" secondItem="GnH-T7-YlV" secondAttribute="bottom" constant="31" id="UKc-MB-vRN"/>
-                <constraint firstItem="zCv-dy-SkI" firstAttribute="top" secondItem="h8Y-va-8Fz" secondAttribute="bottom" constant="35" id="WUp-RO-NgS"/>
-                <constraint firstItem="ypo-0p-xeN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZwF-6C-2Yf"/>
-                <constraint firstAttribute="trailing" secondItem="h8Y-va-8Fz" secondAttribute="trailing" constant="10" id="aIm-MR-8oG"/>
+                <constraint firstAttribute="trailing" secondItem="ypo-0p-xeN" secondAttribute="trailing" id="DGy-Jx-zbi"/>
+                <constraint firstItem="h8Y-va-8Fz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="HI3-wK-fzd"/>
+                <constraint firstAttribute="bottom" secondItem="zCv-dy-SkI" secondAttribute="bottom" constant="20" id="SuV-af-9yE"/>
+                <constraint firstItem="zCv-dy-SkI" firstAttribute="top" secondItem="h8Y-va-8Fz" secondAttribute="bottom" constant="25" id="YpH-Om-fz7"/>
+                <constraint firstItem="h8Y-va-8Fz" firstAttribute="top" secondItem="ypo-0p-xeN" secondAttribute="bottom" constant="8" id="cAj-yS-Fef"/>
+                <constraint firstItem="ypo-0p-xeN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gui-Q7-Wye"/>
+                <constraint firstItem="ypo-0p-xeN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jkc-UH-vqS"/>
                 <constraint firstItem="tlT-U2-cpi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kjb-Dp-wMY"/>
-                <constraint firstItem="ypo-0p-xeN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mqs-te-nfc"/>
-                <constraint firstItem="h8Y-va-8Fz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="uxM-1y-scV"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="378" height="708"/>
+            <size key="customSize" width="521" height="594"/>
             <connections>
                 <outlet property="filmImageView" destination="ypo-0p-xeN" id="VIV-Uw-Ob2"/>
                 <outlet property="realLabel" destination="zCv-dy-SkI" id="cP9-Nk-ZYl"/>
-                <outlet property="ticketImageView" destination="GnH-T7-YlV" id="r5q-l2-abG"/>
                 <outlet property="titreLabel" destination="h8Y-va-8Fz" id="GGt-f7-CWi"/>
             </connections>
-            <point key="canvasLocation" x="-47.826086956521742" y="167.41071428571428"/>
+            <point key="canvasLocation" x="48.550724637681164" y="70.3125"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -72,7 +72,7 @@ class FilterView: UIView, UITableViewDelegate, UITableViewDataSource {
 		case .year:
 			iconImageView.image = UIImage(named: "Fichier 27")
 			titleLabel.text = "Années"
-			selectValues = ["A", "B", "C", "D"]
+			selectValues = ["2019", "1997", "1995", "1999"]
 		case .like:
 			iconImageView.image = UIImage(named: "Fichier 19")
 			titleLabel.text = "Aimer"
@@ -80,7 +80,7 @@ class FilterView: UIView, UITableViewDelegate, UITableViewDataSource {
 		case .type:
 			iconImageView.image = UIImage(named: "Fichier 1")
 			titleLabel.text = "Genre"
-			selectValues = ["I", "J", "K", "L"]
+			selectValues = ["Action", "Adventure", "Animation", "Comedy"]
 		case .status:
 			iconImageView.image = UIImage(named: "Fichier 21")
 			titleLabel.text = "Status"
