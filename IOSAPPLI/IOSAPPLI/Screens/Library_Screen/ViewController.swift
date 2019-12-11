@@ -42,7 +42,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        showD(UIStoryboard(name: "DetailsScreen", bundle: nil).instantiateViewController(identifier: "DetailsScreen"), sender: nil)
+//      showD(UIStoryboard(name: "DetailsScreen", bundle: nil).instantiateViewController(identifier: "DetailsScreen"), sender: nil)
         showDetailViewController(UIStoryboard(name: "DetailsScreen", bundle: nil).instantiateViewController(identifier: "DetailsScreen"), sender: self)
         
     }
@@ -79,7 +79,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let headerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeaderCollectionViewCell", for: indexPath) as! HeaderCollectionViewCell
 			headerCell.parentView = self.collectionview
 			headerCell.configure()
-			headerCell.delegate = self
+			headerCell.delegate = self      
             return headerCell
             
         } else {
