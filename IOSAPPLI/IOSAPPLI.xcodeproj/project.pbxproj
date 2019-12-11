@@ -223,11 +223,8 @@
 				76ED089923979F6A004DDB74 /* CardMovieCollectionViewCell.xib in Resources */,
 				E3D099AA239FD2F800C1EFAE /* FilterView.xib in Resources */,
 				7698C12C238D63F100FF4932 /* Assets.xcassets in Resources */,
-<<<<<<< HEAD
 				E46C8177239E31F2003D6B62 /* DetailsScreen.storyboard in Resources */,
-=======
 				763852FF239E487900C743F1 /* HeaderCollectionViewCell.xib in Resources */,
->>>>>>> master
 				7698C12A238D63F000FF4932 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

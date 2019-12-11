@@ -63,17 +63,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-<<<<<<< HEAD
-        let currentMovie = movies[indexPath.row]
-        cell.displayContent(filmimage: currentMovie.poster_path!, titre: currentMovie.title!, vote: currentMovie.vote_average!)
-            return cell
-=======
 		let totalWidth = collectionView.frame.width
 		
         if indexPath.section == 0 {
             return CGSize(width: totalWidth, height: 385)
             
->>>>>>> master
         }
         return CGSize(width: totalWidth/2 -  5 , height: 300)
         
