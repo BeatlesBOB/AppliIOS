@@ -93,24 +93,24 @@ struct SearchMovies: Decodable{
 
 struct MovieDetails: Codable {
     let adult: Bool?
-    let backdropPath: String?
-    let belongsToCollection: CollectionM?
+    let backdrop_path: String?
+    let belongs_to_collection: CollectionM?
     let budget: Int?
     let genres: [Genre]?
     let homepage: String?
     let id: Int?
-    let imdbID, originalLanguage, originalTitle, overview: String?
+    let imdb_id, original_language, original_title, overview: String?
     let popularity: Double?
-    let posterPath: String?
-    let productionCompanies: [ProductionCompany]?
-    let productionCountries: [ProductionCountry]?
-    let releaseDate: String?
+    let poster_path: String?
+    let production_companies: [ProductionCompany]?
+    let production_countries: [ProductionCountry]?
+    let release_date: String?
     let revenue, runtime: Int?
-    let spokenLanguages: [SpokenLanguage]?
+    let spoken_languages: [SpokenLanguage]?
     let status, tagline, title: String?
     let video: Bool?
-    let voteAverage: Double?
-    let voteCount: Int?
+    let vote_average: Double?
+    let vote_count: Int?
 }
 
 // MARK: - Collection
@@ -130,16 +130,16 @@ struct Genre: Codable {
 // MARK: - ProductionCompany
 struct ProductionCompany: Codable {
     let id: Int
-    let logoPath: String?
-    let name, originCountry: String
+    let logo_path: String?
+    let name, origin_country: String
 }
 
 // MARK: - ProductionCountry
 struct ProductionCountry: Codable {
-    let iso3166_1, name: String
+    let iso_3166_1, name: String
 }
 
 // MARK: - SpokenLanguage
 struct SpokenLanguage: Codable {
-    let iso639_1, name: String
+    let iso_639_1, name: String
 }

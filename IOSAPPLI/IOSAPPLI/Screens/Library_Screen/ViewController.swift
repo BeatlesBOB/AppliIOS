@@ -42,8 +42,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        showD(UIStoryboard(name: "DetailsScreen", bundle: nil).instantiateViewController(identifier: "DetailsScreen"), sender: nil)
-        showDetailViewController(UIStoryboard(name: "DetailsScreen", bundle: nil).instantiateViewController(identifier: "DetailsScreen"), sender: self)
         
     }
     
@@ -89,6 +87,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 return cell
 		}
 	}
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVC = UIStoryboard(name: "DetailsScreen", bundle: nil).instantiateViewController(identifier: "DetailsScreen") as! DetailsScreen
+        detailVC.movieId = movies[indexPath.row].id
+        showDetailViewController(detailVC, sender: self)
+    }
+
 	
 	// MARK: - FilterProtocol
 	func selectFilter(type: FilterType, value: String) {
