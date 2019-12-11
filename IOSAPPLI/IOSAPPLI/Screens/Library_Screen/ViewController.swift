@@ -89,9 +89,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 	}
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailVC = UIStoryboard(name: "DetailsScreen", bundle: nil).instantiateViewController(identifier: "DetailsScreen") as! DetailsScreen
-        detailVC.movieId = movies[indexPath.row].id
-        showDetailViewController(detailVC, sender: self)
+        if(indexPath.section != 0){
+            let detailVC = UIStoryboard(name: "DetailsScreen", bundle: nil).instantiateViewController(identifier: "DetailsScreen") as! DetailsScreen
+            detailVC.movieId = movies[indexPath.row].id
+            showDetailViewController(detailVC, sender: self)
+        }
     }
 
 	
