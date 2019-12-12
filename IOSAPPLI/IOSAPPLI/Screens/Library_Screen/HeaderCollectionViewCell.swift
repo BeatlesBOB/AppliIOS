@@ -63,7 +63,6 @@ class HeaderCollectionViewCell: UICollectionViewCell,UITextFieldDelegate,UIGestu
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("TOUCHER")
         searchbar.resignFirstResponder()
     }
 
