@@ -79,7 +79,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             return CGSize(width: totalWidth, height: 385)
             
         }
-        return CGSize(width: totalWidth/2 -  5 , height: 300)
+        return CGSize(width: 195 -  5 , height: 268)
         
     }
     
@@ -151,7 +151,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         {
             api.getGenreMovies(genres:[35])
         }
-
+        
+        
 		print("On vient de filtrer le select \(type.rawValue) avec la valeur \(value)")
 	}
     func updateSearchText(value: String){

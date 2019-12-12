@@ -25,7 +25,8 @@ class HeaderCollectionViewCell: UICollectionViewCell,UITextFieldDelegate,UIGestu
     }
 	
 	func configure() {
-		yearFilterView.configure(.year)
+		
+        yearFilterView.configure(.year)
 		yearFilterView.parentView = parentView
 		yearFilterView.delegate = delegate
 		

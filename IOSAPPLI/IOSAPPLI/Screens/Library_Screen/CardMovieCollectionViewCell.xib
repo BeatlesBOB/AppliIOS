@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,18 +17,19 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ypo-0p-xeN">
-                        <rect key="frame" x="0.0" y="0.0" width="521" height="499"/>
+                        <rect key="frame" x="0.0" y="0.0" width="521" height="505"/>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fichier 19" translatesAutoresizingMaskIntoConstraints="NO" id="tlT-U2-cpi">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fichier 28" translatesAutoresizingMaskIntoConstraints="NO" id="tlT-U2-cpi">
                         <rect key="frame" x="481" y="0.0" width="40" height="40"/>
+                        <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="VsG-4G-b0S"/>
                             <constraint firstAttribute="height" constant="40" id="dTl-4M-XKY"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8Y-va-8Fz">
-                        <rect key="frame" x="20" y="507" width="39.5" height="24"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8Y-va-8Fz">
+                        <rect key="frame" x="20" y="513" width="32" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -38,18 +39,27 @@
                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fichier 21" translatesAutoresizingMaskIntoConstraints="NO" id="RjQ-gb-wHk">
+                        <rect key="frame" x="457" y="535" width="44" height="39"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="0aw-8b-QBl"/>
+                            <constraint firstAttribute="height" constant="39" id="Bcv-3j-Cjq"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.38358274650000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="zCv-dy-SkI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="16G-zQ-ATA"/>
                 <constraint firstAttribute="trailing" secondItem="tlT-U2-cpi" secondAttribute="trailing" id="3kI-vh-jIs"/>
+                <constraint firstAttribute="trailing" secondItem="RjQ-gb-wHk" secondAttribute="trailing" constant="20" id="7th-Ru-h41"/>
                 <constraint firstAttribute="trailing" secondItem="ypo-0p-xeN" secondAttribute="trailing" id="DGy-Jx-zbi"/>
                 <constraint firstItem="h8Y-va-8Fz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="HI3-wK-fzd"/>
                 <constraint firstAttribute="bottom" secondItem="zCv-dy-SkI" secondAttribute="bottom" constant="20" id="SuV-af-9yE"/>
                 <constraint firstItem="zCv-dy-SkI" firstAttribute="top" secondItem="h8Y-va-8Fz" secondAttribute="bottom" constant="25" id="YpH-Om-fz7"/>
                 <constraint firstItem="h8Y-va-8Fz" firstAttribute="top" secondItem="ypo-0p-xeN" secondAttribute="bottom" constant="8" id="cAj-yS-Fef"/>
                 <constraint firstItem="ypo-0p-xeN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gui-Q7-Wye"/>
+                <constraint firstAttribute="bottom" secondItem="RjQ-gb-wHk" secondAttribute="bottom" constant="20" id="icT-1e-HrL"/>
                 <constraint firstItem="ypo-0p-xeN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jkc-UH-vqS"/>
                 <constraint firstItem="tlT-U2-cpi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kjb-Dp-wMY"/>
             </constraints>
@@ -57,13 +67,16 @@
             <size key="customSize" width="521" height="594"/>
             <connections>
                 <outlet property="filmImageView" destination="ypo-0p-xeN" id="VIV-Uw-Ob2"/>
+                <outlet property="heartImageView" destination="tlT-U2-cpi" id="amP-sK-8YO"/>
                 <outlet property="realLabel" destination="zCv-dy-SkI" id="cP9-Nk-ZYl"/>
+                <outlet property="ticketImageView" destination="RjQ-gb-wHk" id="1Kq-df-Jm8"/>
                 <outlet property="titreLabel" destination="h8Y-va-8Fz" id="GGt-f7-CWi"/>
             </connections>
             <point key="canvasLocation" x="48.550724637681164" y="70.3125"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Fichier 19" width="89" height="78"/>
+        <image name="Fichier 21" width="88" height="60"/>
+        <image name="Fichier 28" width="45" height="42"/>
     </resources>
 </document>

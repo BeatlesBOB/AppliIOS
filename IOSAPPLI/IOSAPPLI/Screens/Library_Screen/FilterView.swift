@@ -75,9 +75,9 @@ class FilterView: UIView, UITableViewDelegate, UITableViewDataSource {
 			titleLabel.text = "Années"
 			selectValues = ["2019", "1997", "1995", "1999"]
 		case .like:
-			iconImageView.image = UIImage(named: "Fichier 19")
-			titleLabel.text = "Aimer"
-			selectValues = ["E", "F", "G", "H"]
+            iconImageView.image = UIImage(named: "Fichier 19")
+            titleLabel.text = "Aimer"
+            selectValues = ["Aime", "Aime pas"]
 		case .type:
 			iconImageView.image = UIImage(named: "Fichier 1")
 			titleLabel.text = "Genre"
